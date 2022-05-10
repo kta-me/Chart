@@ -1,31 +1,71 @@
 import tkinter as tk
 
-import ChartExample2
-import ChartExample3
+import NormalCharts
+import SinusChart
 
 def do_close():
     window.destroy()
 
+# Создание главного окна
 window = tk.Tk()
-window.geometry("450x450")
+window.geometry("450x520")
 window.title("Примеры построения графиков")
 
+# Добавление метки заголовка
 lblTitle = tk.Label(text = "Примеры построения графиков", font = ('Helvetica', 16, 'bold'), fg = '#0000cc')
 lblTitle.place(x = 55, y = 25)
 
-btnChart = tk.Button(window, text = "График 1", font = ('Helvetica', 10, 'bold'), command = ChartExample2.plot_chart)
+# Добавление кнопки и метки для графика 1
+btnChart = tk.Button(window, text = "График 1", font = ('Helvetica', 10, 'bold'), command = SinusChart.show_chart)
 btnChart.place(x = 40, y = 115, width = 90, height = 30)
 
 lblChart = tk.Label(text = "График синуса matplotlib")
 lblChart.place(x = 170, y = 122)
 
-btnChart2 = tk.Button(window, text = "График 2", font = ('Helvetica', 10, 'bold'), command = ChartExample3.plot_chart)
+# Добавление кнопки и метки для графика 2
+btnChart2 = tk.Button(window, text = "График 2", font = ('Helvetica', 10, 'bold'), command = NormalCharts.one_chart)
 btnChart2.place(x = 40, y = 165, width = 90, height = 30)
 
 lblChart2 = tk.Label(text = "Нормальное распределение")
 lblChart2.place(x = 170, y = 172)
 
+# Добавление кнопки и метки для графика 3
+btnChart2 = tk.Button(window, text = "График 3", font = ('Helvetica', 10, 'bold'), command = NormalCharts.three_charts)
+btnChart2.place(x = 40, y = 215, width = 90, height = 30)
+
+lblChart2 = tk.Label(text = "Нормальное распределение - 3 графика")
+lblChart2.place(x = 170, y = 222)
+
+# Добавление кнопки и метки для графика 4
+btnChart2 = tk.Button(window, text = "График 4", font = ('Helvetica', 10, 'bold'), command = SinusChart.show_chart)
+btnChart2.place(x = 40, y = 265, width = 90, height = 30)
+
+lblChart2 = tk.Label(text = "Описание графика")
+lblChart2.place(x = 170, y = 272)
+
+# Добавление кнопки и метки для графика 5
+btnChart2 = tk.Button(window, text = "График 5", font = ('Helvetica', 10, 'bold'), command = SinusChart.show_chart)
+btnChart2.place(x = 40, y = 315, width = 90, height = 30)
+
+lblChart2 = tk.Label(text = "Описание графика")
+lblChart2.place(x = 170, y = 322)
+
+# Добавление кнопки и метки для графика 6
+btnChart2 = tk.Button(window, text = "График 6", font = ('Helvetica', 10, 'bold'), command = SinusChart.show_chart)
+btnChart2.place(x = 40, y = 365, width = 90, height = 30)
+
+lblChart2 = tk.Label(text = "Описание графика")
+lblChart2.place(x = 170, y = 372)
+
+# Добавление кнопки и метки для графика 7
+btnChart2 = tk.Button(window, text = "График 7", font = ('Helvetica', 10, 'bold'), command = SinusChart.show_chart)
+btnChart2.place(x = 40, y = 415, width = 90, height = 30)
+
+lblChart2 = tk.Label(text = "Описание графика")
+lblChart2.place(x = 170, y = 422)
+
+# Закрытие главного окна
 btnClose = tk.Button(window, text = "Закрыть", font = ('Helvetica', 10, 'bold'), command = do_close)
-btnClose.place(x = 330, y = 400, width = 90, height = 30)
+btnClose.place(x = 330, y = 465, width = 90, height = 30)
 
 window.mainloop()
